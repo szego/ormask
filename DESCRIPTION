@@ -1,0 +1,19 @@
+Package: ormask
+Title: A Mask for Oregon for ggplot2
+Version: 0.1.0
+Date: 2019-11-05
+Authors@R: 
+    person(given = "Antonio R.",
+           family = "Vargas",
+           role = c("aut", "cre"),
+           email = "antonio.ravon.vargas@gmail.com",
+           comment = c(ORCID = "0000-0002-1198-4856"))
+Description: Fills the area around Oregon with a solid color. Also includes the option to plot roads and bodies of water.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    ggplot2,
+    sf
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1

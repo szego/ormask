@@ -1,7 +1,7 @@
 Package: ormask
 Title: A Mask for Oregon for ggplot2
-Version: 0.1.0
-Date: 2019-11-05
+Version: 0.1.1
+Date: 2019-11-23
 Authors@R: 
     person(given = "Antonio R.",
            family = "Vargas",

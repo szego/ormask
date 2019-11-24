@@ -21,7 +21,7 @@ Also includes the option to draw roads and bodies of water.
 \item \code{road_color}: The color of the road lines. When set to NA (the default),
 roads are not rendered. Set this to any color to include roads in the plot.
 \item \code{water_color}: The color of the water. When set to NA (the default), water
-is not rendered. Set this to any color to include roads in the plot. Water
+is not rendered. Set this to any color to include water in the plot. Water
 may take quite a while to render.
 \item \code{bg_color}: The color of the mask surrounding Oregon.
 \item \code{xlim}: Limits of the x-axis. Defaults to include all of Oregon.

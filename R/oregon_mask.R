@@ -10,6 +10,8 @@
 #'   is not rendered. Set this to any color to include water in the plot. Water
 #'   may take quite a while to render.
 #' * `bg_color`: The color of the mask surrounding Oregon.
+#' * `border_color`: The color of the border surrounding Oregon.
+#' * `border_size`: The thickness of the border surrounding Oregon. If NULL, uses ggplot2 default aesthetic.
 #' * `xlim`: Limits of the x-axis. Defaults to include all of Oregon.
 #' * `ylim`: Limits of the y-axis. Defaults to include all of Oregon.
 #'
@@ -23,15 +25,27 @@ oregon_mask <- function(
     road_color = NA,
     water_color = NA,
     bg_color = "#222222",
+    border_color = NA,
+    border_size = NULL,
     xlim = c(-124.6, -116.4),
     ylim = c(41.9, 46.3)
 ) {
-    p <- list(
-        ggplot2::geom_sf(
+    if(is.null(border_size)) {
+        p <- ggplot2::geom_sf(
             data = or_mask,
-            color = NA,
-            fill = bg_color
-        ),
+            fill = bg_color,
+            color = border_color
+        )
+    } else {
+        p <- ggplot2::geom_sf(
+            data = or_mask,
+            fill = bg_color,
+            color = border_color,
+            size = border_size
+        )
+    }
+    p <- list(
+        p,
         ggplot2::coord_sf(
             xlim = xlim,
             ylim = ylim,

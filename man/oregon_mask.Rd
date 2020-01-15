@@ -4,9 +4,16 @@
 \alias{oregon_mask}
 \title{Masks out the area just outside Oregon with a solid color.}
 \usage{
-oregon_mask(road_size = 0.01, road_color = NA, water_color = NA,
-  bg_color = "#222222", xlim = c(-124.6, -116.4), ylim = c(41.9,
-  46.3))
+oregon_mask(
+  road_size = 0.01,
+  road_color = NA,
+  water_color = NA,
+  bg_color = "#222222",
+  border_color = NA,
+  border_size = NULL,
+  xlim = c(-124.6, -116.4),
+  ylim = c(41.9, 46.3)
+)
 }
 \value{
 A list of ggplot2 geoms of types \code{\link[ggplot2:geom_sf]{ggplot2::geom_sf()}} and \code{\link[ggplot2:coord_sf]{ggplot2::coord_sf()}}.
@@ -24,6 +31,8 @@ roads are not rendered. Set this to any color to include roads in the plot.
 is not rendered. Set this to any color to include water in the plot. Water
 may take quite a while to render.
 \item \code{bg_color}: The color of the mask surrounding Oregon.
+\item \code{border_color}: The color of the border surrounding Oregon.
+\item \code{border_size}: The thickness of the border surrounding Oregon. If NULL, uses ggplot2 default aesthetic.
 \item \code{xlim}: Limits of the x-axis. Defaults to include all of Oregon.
 \item \code{ylim}: Limits of the y-axis. Defaults to include all of Oregon.
 }
